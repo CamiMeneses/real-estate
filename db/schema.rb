@@ -17,15 +17,15 @@ ActiveRecord::Schema.define(version: 2021_08_26_020450) do
 
   create_table "buildings", force: :cascade do |t|
     t.string "name", limit: 128, null: false
-    t.integer "type"
+    t.string "type_cd"
     t.string "street", limit: 128, null: false
     t.string "external_number", limit: 12, null: false
     t.string "internal_number"
-    t.string "neigthborhood", limit: 128, null: false
+    t.string "neighborhood", limit: 128, null: false
     t.string "city", limit: 64, null: false
     t.string "country", limit: 2, null: false
     t.integer "rooms", null: false
-    t.integer "bathrooms", null: false
+    t.float "bathrooms", null: false
     t.string "comments", limit: 128
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

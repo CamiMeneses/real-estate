@@ -36,5 +36,10 @@ module RealEstate
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
+
+    begin
+      require File.expand_path('../../lib/constants', __FILE__)
+    rescue LoadError
+    end
   end
 end

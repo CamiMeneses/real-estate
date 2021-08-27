@@ -10,7 +10,7 @@ class CreateBuildings < ActiveRecord::Migration[6.1]
       t.string :city, :limit => 64, :null => false
       t.string :country, :limit => 2, :null => false
       t.integer :rooms, :null => false
-      t.integer :bathrooms, :null => false
+      t.float :bathrooms, :null => false
       t.string :comments, :limit => 128
 
       t.timestamps
